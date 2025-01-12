@@ -1,0 +1,84 @@
+---
+import { Image } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="min-h-screen bg-black text-white p-6 font-mono">
+    <nav class="mb-8">
+      <a href="/" class="text-[#909090]">← back to home</a>
+    </nav>
+
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-2xl font-normal mb-4">
+        vercel.com redesign<span class="caret">_</span>
+      </h1>
+
+      <div class="mb-8">
+        <Image
+          src="/placeholder.svg?height=400&width=800"
+          alt="Vercel redesign full preview"
+          width={800}
+          height={400}
+          class="rounded-md"
+        />
+      </div>
+
+      <div class="space-y-6 text-sm [&>p]:text-[#909090]">
+        <h2 class="font-normal text-white">project overview</h2>
+        <p>
+          the vercel.com redesign project aimed to refresh and modernize the
+          online presence of vercel, a cloud platform for static sites and
+          serverless functions. the goal was to create a sleek, performant, and
+          user-friendly website that reflects vercel's cutting-edge technology
+          and commitment to developer experience.
+        </p>
+
+        <h2 class="font-normal text-white">key features</h2>
+        <ul class="list-disc pl-5 space-y-2 text-[#909090]">
+          <li>responsive design optimized for all device sizes</li>
+          <li>improved navigation and information architecture</li>
+          <li>
+            enhanced visual hierarchy to highlight key products and features
+          </li>
+          <li>integration of interactive demos and code snippets</li>
+          <li>optimized performance with next.js and vercel's edge network</li>
+        </ul>
+
+        <h2 class="font-normal text-white">technologies used</h2>
+        <ul class="list-disc pl-5 space-y-2 text-[#909090]">
+          <li>next.js for server-side rendering and static site generation</li>
+          <li>react for building user interface components</li>
+          <li>typescript for type-safe javascript development</li>
+          <li>tailwind css for rapid and responsive styling</li>
+          <li>framer motion for smooth animations and transitions</li>
+        </ul>
+
+        <h2 class="font-normal text-white">challenges and solutions</h2>
+        <p>
+          one of the main challenges was balancing the need for a content-rich
+          site with fast load times. we implemented advanced code-splitting
+          techniques and leveraged next.js's image optimization to ensure
+          optimal performance without sacrificing visual appeal or
+          functionality.
+        </p>
+
+        <h2 class="font-normal text-white">results</h2>
+        <p>
+          the redesigned vercel.com saw a 30% increase in user engagement and a
+          25% reduction in bounce rate. the new design also contributed to a 20%
+          increase in sign-ups for vercel's services within the first month of
+          launch.
+        </p>
+
+        <h2 class="font-normal text-white">learnings</h2>
+        <p>
+          this project reinforced the importance of a user-centered design
+          approach and the value of iterative development. it also showcased the
+          power of next.js and vercel's platform in creating high-performance
+          web applications.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>
