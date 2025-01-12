@@ -5,6 +5,11 @@ import ContainerSection from "@components/ContainerSection.astro";
 import ListItem from "@components/ListItem.astro";
 import UserProfile from "@components/UserProfile.astro";
 import Layout from "@layouts/Layout.astro";
+
+import { ListProject } from "@config/projects";
+import { ListPost } from "@config/posts";
+import type { ListProjectProps } from "@config/projects";
+import type { ListPostProps } from "@config/posts";
 ---
 
 <Layout>
@@ -28,16 +33,16 @@ import Layout from "@layouts/Layout.astro";
 
     <ContainerSection title="projects">
       {
-        Array.from([2]).map(() => {
-          return <ListItem />;
+        ListProject.map((listProjectsItems: ListProjectProps, _) => {
+          return <ListItem {...listProjectsItems} />;
         })
       }
     </ContainerSection>
 
     <ContainerSection title="posts">
       {
-        Array.from([2]).map(() => {
-          return <ListItem />;
+        ListPost.map((listPostItems: ListPostProps, _) => {
+          return <ListItem {...listPostItems} />;
         })
       }
     </ContainerSection>

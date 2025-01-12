@@ -1,23 +1,33 @@
 ---
 import { Image } from "astro:assets";
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  alt?: string;
+  urlImage?: string;
+}
+const { name, description, url, alt, urlImage } = Astro.props;
 ---
 
 <li>
-  <a href="/proyectos/calculadora-de-isr" class="text-[#909090]">
-    Calculadora de ISR - Web App
+  <a href={url} class="text-[#909090]">
+    {name}
   </a>
   <p class="text-xs text-[#909090] mt-1">
-    reimagining the online presence of the cloud platform for static sites and
-    serverless functions.
+    {description}
   </p>
-  <div class="mt-2">
-    <Image
-      src="https://placehold.co/200x350"
-      alt="Vercel redesign preview"
-      width={350}
-      height={200}
-      class="rounded-md"
-    />
-  </div>
-  <p class="text-xs text-[#606060] mt-1">january 15, 2023</p>
+  {
+    urlImage && alt && (
+      <div class="mt-2">
+        <Image
+          src={urlImage}
+          alt={alt}
+          width={350}
+          height={200}
+          class="rounded-md"
+        />
+      </div>
+    )
+  }
 </li>
