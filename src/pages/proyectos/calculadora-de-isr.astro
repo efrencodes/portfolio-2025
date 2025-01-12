@@ -4,19 +4,21 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="min-h-screen bg-black text-white p-6 font-mono">
-    <nav class="mb-8">
+  <div
+    class="max-w-[38rem] w-full text-sm [&_a]:text-xs [&_a]:text-[#909090]"
+  >
+    <nav class="mb-10">
       <a href="/" class="text-[#909090]">← back to home</a>
     </nav>
 
     <div class="max-w-3xl mx-auto">
       <h1 class="text-2xl font-normal mb-4">
-        vercel.com redesign<span class="caret">_</span>
+        calculadora de isr - occ mundial<span class="caret">_</span>
       </h1>
 
-      <div class="mb-8">
+      <div class="mb-10">
         <Image
-          src="/placeholder.svg?height=400&width=800"
+          src="https://placehold.co/800x400"
           alt="Vercel redesign full preview"
           width={800}
           height={400}
@@ -24,7 +26,7 @@ import Layout from "@layouts/Layout.astro";
         />
       </div>
 
-      <div class="space-y-6 text-sm [&>p]:text-[#909090]">
+      <div class="space-y-10 text-sm [&>p]:text-[#909090] [&>p]:text-xs">
         <h2 class="font-normal text-white">project overview</h2>
         <p>
           the vercel.com redesign project aimed to refresh and modernize the
