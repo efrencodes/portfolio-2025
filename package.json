@@ -1,7 +1,21 @@
 {
-  "name": "portfolio-2025",
+  "name": "portfolio-efren-martinez-2025",
   "type": "module",
   "version": "0.0.1",
+  "author": {
+    "name": "efrencodes"
+  },
+  "homepage": "https://www.efrencodes.com",
+  "keywords": [
+    "JavaScript",
+    "Astro",
+    "tailwindcss",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/efrencodes/portfolio-2025.git"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
