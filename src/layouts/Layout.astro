@@ -1,22 +1,48 @@
 ---
+import { SEO } from "astro-seo";
 import "@styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>EFRÉN MARTÍNEZ</title>
+    <SEO
+      charset="UTF-8"
+      title="EFREN MARTINEZ - SENIOR FRONTEND ENGINNER"
+      description="Senior Frontend Engineer especializado en #javascript #vue #react #typescript #withastro #nextjs #cypress"
+      canonical={new URL("https://www.efrencodes.com")}
+      twitter={{
+        creator: "@efrencodes",
+        card: "summary_large_image",
+        site: "https://www.efrencodes.com",
+        title: "EFREN MARTINEZ - SENIOR FRONTEND ENGINNER",
+        description:
+          "Senior Frontend Engineer especializado en #javascript #vue #react #typescript #withastro #nextjs #cypress",
+        image: "https://www.efrencodes.com/images/profile-efren-martinez.webp",
+        imageAlt: "Profile - efrencodes",
+      }}
+      openGraph={{
+        basic: {
+          title: "EFREN MARTINEZ - SENIOR FRONTEND ENGINNER",
+          image: "https://www.efrencodes.com/images/profile-efren-martinez.webp",
+          url: new URL("https://www.efrencodes.com"),
+          type: "summary_large_image",
+        },
+        optional: {
+          description:
+            "Senior Frontend Engineer especializado en #javascript #vue #react #typescript #withastro #nextjs #cypress",
+          siteName: "EFREN MARTINEZ - SENIOR FRONTEND ENGINNER",
+          locale: "es-MX",
+        },
+      }}
+    />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="google" content="notranslate" />
     <meta name="msapplication-TileColor" content="#d4d4d8" />
     <meta name="robots" content="index, follow" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link
       type="text/plain"
       rel="author"
