@@ -8,10 +8,10 @@ export interface ListProjectProps {
 
 export const ListProject: ListProjectProps[] = [
   {
-    name: "calculadora de isr - occ mundial",
-    description: "Calculadora de ISR para empleados de OCC Mundial",
-    url: "/proyectos/calculadora-de-isr/",
+    name: "Calculadora de ISR | OCC Mundial",
+    description: "Conoce tu ingreso real después de retenciones y enfoca tu búsqueda en empleos que cumplan tus metas.",
+    url: "/proyectos/calculadora-de-isr",
     alt: "Calculadora de ISR para empleados de OCC Mundial",
-    urlImage: "https://placehold.co/200x350"
+    urlImage: "/proyectos/calculadora-de-isr/home.png"
   },
 ];

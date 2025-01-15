@@ -7,9 +7,7 @@ import UserProfile from "@components/UserProfile.astro";
 import Layout from "@layouts/Layout.astro";
 
 import { ListProject } from "@config/projects";
-import { ListPost } from "@config/posts";
 import type { ListProjectProps } from "@config/projects";
-import type { ListPostProps } from "@config/posts";
 ---
 
 <Layout>
@@ -31,18 +29,10 @@ import type { ListPostProps } from "@config/posts";
 
     <TodaySection />
 
-    <ContainerSection title="projects">
+    <ContainerSection title="proyectos">
       {
         ListProject.map((listProjectsItems: ListProjectProps, _) => {
           return <ListItem {...listProjectsItems} />;
-        })
-      }
-    </ContainerSection>
-
-    <ContainerSection title="posts">
-      {
-        ListPost.map((listPostItems: ListPostProps, _) => {
-          return <ListItem {...listPostItems} />;
         })
       }
     </ContainerSection>
