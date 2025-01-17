@@ -4,51 +4,37 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout>
-  <div
-    class="max-w-[38rem] w-full text-sm [&_a]:text-xs [&_a]:text-[#909090]"
-  >
-    <nav class="mb-10">
-      <a href="/" class="text-[#909090]">← regresar a /</a>
-    </nav>
+  <nav>
+    <a href="/">← regresar a /</a>
+  </nav>
 
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-2xl font-normal mb-4">
-        Calculadora de ISR | OCC Mundial<span class="caret">_</span>
-      </h1>
+  <h1>
+    Calculadora de ISR | OCC Mundial<span class="caret">_</span>
+  </h1>
 
-      <div class="mb-10">
-        <Image
-          src="/proyectos/calculadora-de-isr/home-desktop.png"
-          alt="Calculadora de ISR para empleados de OCC Mundial"
-          width={800}
-          height={400}
-          class="rounded-md"
-        />
-      </div>
+  <Image
+    src="/proyectos/calculadora-de-isr/home-desktop.png"
+    alt="Calculadora de ISR para empleados de OCC Mundial"
+    width={800}
+    height={400}
+    class="rounded-md"
+  />
 
-      <div class="space-y-10 text-sm [&>p]:text-[#909090] [&>p]:text-xs">
-        <h2 class="font-normal text-white">acerca del proyecto</h2>
-        <p>
-          El proyecto consiste en desarrollar una calculadora de retención de ISR (Impuesto Sobre la Renta) que ayude a los usuarios a calcular de forma precisa sus impuestos sobre salarios semanales, quincenales o mensuales. La herramienta estará disponible en dispositivos móviles y de escritorio, optimizada para SEO y SEM, e incluirá recursos adicionales como preguntas frecuentes, contenido de blog y sugerencias de vacantes. Con este proyecto, se busca mejorar la visibilidad de OCC Mundial, atraer y retener usuarios, y aumentar el tráfico hacia la plataforma, manteniéndose competitiva en el mercado laboral.
-        </p>
+  <h2>acerca del proyecto</h2>
+  <p>the vercel.com redesign</p>
 
-        <h2 class="font-normal text-white">principales caracteristicas</h2>
-        <ul class="list-disc pl-5 space-y-2 text-[#909090]">
-          <li>Permite calcular el impuesto retenido para salarios semanales, quincenales y mensuales</li>
-          <li>Disponible en dispositivos de escritorio y móviles</li>
-          <li>Integra recomendaciones de empleo para ofrecer un valor adicional a los usuarios mientras utilizan la herramienta.</li>
-        </ul>
+  <h2>principales caracteristicas</h2>
+  <ul class="list-disc list-inside">
+    <li>responsive design optimized for all device sizes</li>
+  </ul>
 
-        <h2 class="font-normal text-white">Tecnologías</h2>
-        <ul class="list-disc pl-5 space-y-2 text-[#909090]">
-          <li>next.js v14</li>
-          <li>react</li>
-          <li>typescript</li>
-          <li>tailwind css</li>
-          <li>graphql</li>
-          <li>recharts</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <h2>Tecnologías</h2>
+  <ul class="list-disc list-inside">
+    <li>next.js v14</li>
+    <li>react</li>
+    <li>typescript</li>
+    <li>tailwind css</li>
+    <li>graphql</li>
+    <li>recharts</li>
+  </ul>
 </Layout>

@@ -11,21 +11,17 @@ import type { ListProjectProps } from "@config/projects";
 ---
 
 <Layout>
-  <div
-    class="max-w-[38rem] w-full text-sm [&>p]:text-xs [&>p]:text-[#909090] [&_a]:text-xs [&_a]:text-[#909090]"
-  >
-    <UserProfile />
+  <UserProfile />
 
-    <TodaySection />
+  <TodaySection />
 
-    <ContainerSection title="proyectos">
-      {
-        ListProject.map((listProjectsItems: ListProjectProps, _) => {
-          return <ListItem {...listProjectsItems} />;
-        })
-      }
-    </ContainerSection>
+  <ContainerSection title="proyectos">
+    {
+      ListProject.map((listProjectsItems: ListProjectProps, _) => {
+        return <ListItem {...listProjectsItems} />;
+      })
+    }
+  </ContainerSection>
 
-    <ContactSection />
-  </div>
+  <ContactSection />
 </Layout>

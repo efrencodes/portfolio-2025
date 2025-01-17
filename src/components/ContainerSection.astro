@@ -5,7 +5,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<h2 class="font-normal mb-2">{title}</h2>
-<ul class="list-none p-0 space-y-4 mb-14">
+<h2>{title}</h2>
+<ul class="list-none p-0">
     <slot />
 </ul>
