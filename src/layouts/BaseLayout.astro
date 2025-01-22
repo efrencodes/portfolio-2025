@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import { META_SEO, DEFAULT_THEME_COLOR } from "@config/seo"
 import "@styles/global.css";
 ---
 
@@ -8,37 +9,35 @@ import "@styles/global.css";
   <head>
     <SEO
       charset="UTF-8"
-      title="EFREN MARTINEZ - SENIOR FRONTEND ENGINEER"
-      description="Senior Frontend Engineer especializado en #javascript #vue #react #typescript #withastro #nextjs #cypress"
-      canonical={new URL("https://www.efrencodes.com")}
+      title={META_SEO.title}
+      description={META_SEO.description}
+      canonical={META_SEO.canonical}
       twitter={{
-        creator: "@efrencodes",
+        creator: META_SEO.twitter.creator,
         card: "summary_large_image",
-        site: "https://www.efrencodes.com",
-        title: "EFREN MARTINEZ - SENIOR FRONTEND ENGINNER",
-        description:
-          "Senior Frontend Engineer especializado en #javascript #vue #react #typescript #withastro #nextjs #cypress",
-        image: "https://www.efrencodes.com/images/profile-efren-martinez.webp",
-        imageAlt: "Profile - efrencodes",
+        site: META_SEO.twitter.creator,
+        title: META_SEO.title,
+        description: META_SEO.description,
+        image: META_SEO.twitter.image,
+        imageAlt: META_SEO.twitter.imageAlt,
       }}
       openGraph={{
         basic: {
-          title: "EFREN MARTINEZ - SENIOR FRONTEND ENGINNER",
-          image: "https://www.efrencodes.com/images/profile-efren-martinez.webp",
-          url: new URL("https://www.efrencodes.com"),
+          title: META_SEO.openGraph.title,
+          image: META_SEO.openGraph.image,
+          url: META_SEO.openGraph.url,
           type: "summary_large_image",
         },
         optional: {
-          description:
-            "Senior Frontend Engineer especializado en #javascript #vue #react #typescript #withastro #nextjs #cypress",
-          siteName: "EFREN MARTINEZ - SENIOR FRONTEND ENGINNER",
-          locale: "es-MX",
+          description: META_SEO.openGraph.description,
+          siteName: META_SEO.openGraph.siteName,
+          locale: META_SEO.openGraph.locale,
         },
       }}
     />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="google" content="notranslate" />
-    <meta name="msapplication-TileColor" content="#d4d4d8" />
+    <meta name="msapplication-TileColor" content={DEFAULT_THEME_COLOR} />
     <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -47,17 +46,17 @@ import "@styles/global.css";
     <link
       type="text/plain"
       rel="author"
-      href="https://www.efrencodes.com/humans.txt"
+      href={`${META_SEO.canonical}/humans.txt`}
     />
     <meta
       name="apple-mobile-web-app-title"
-      content={new URL("https://www.efrencodes.com")}
+      content={META_SEO.canonical}
     />
     <meta
       name="application-name"
-      content={new URL("https://www.efrencodes.com")}
+      content={META_SEO.canonical}
     />
-    <meta name="theme-color" content="#d4d4d8" />
+    <meta name="theme-color" content={DEFAULT_THEME_COLOR} />
     <meta
       name="keywords"
       content=""
