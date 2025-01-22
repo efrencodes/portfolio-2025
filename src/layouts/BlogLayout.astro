@@ -1,0 +1,107 @@
+---
+import { SEO } from "astro-seo";
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  tags: string[];
+  authors: string[];
+  ogImage: string;
+  cover: string;
+  keywords: string;
+  slug: string;
+  urlNext?: string;
+  urlPrevious?: string;
+  titleNext?: string;
+  titlePrevious?: string;
+}
+
+const {
+  title,
+  description,
+  slug,
+  keywords,
+  ogImage,
+  date,
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  datePublished: date,
+  description: description,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `https://www.efrencodes.com/articulos/${slug}`,
+  },
+  keywords: [keywords],
+  headline: title,
+  image: [ogImage],
+  author: {
+    "@type": "Person",
+    name: "Efrén Martínez",
+    url: `https://www.efrencodes.com/`,
+  },
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <SEO
+      charset="UTF-8"
+      title={title}
+      description={description}
+      canonical={new URL(`https://www.efrencodes.com/articulos/${slug}`)}
+      twitter={{
+        creator: "@efrencodes",
+        card: "summary_large_image",
+        site: `https://www.efrencodes.com/articulos/${slug}`,
+        title: title,
+        description: description,
+        image: "https://www.efrencodes.com/images/profile-efren-martinez.webp",
+        imageAlt: "Profile - efrencodes",
+      }}
+      openGraph={{
+        basic: {
+          title: title,
+          image: "https://www.efrencodes.com/images/profile-efren-martinez.webp",
+          url: new URL(`https://www.efrencodes.com/articulos/${slug}`),
+          type: "summary_large_image",
+        },
+        optional: {
+          description: description,
+          siteName: "Efrén Martínez - Frontend Engineer",
+          locale: "es-MX",
+        },
+      }}
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="google" content="notranslate" />
+    <meta name="msapplication-TileColor" content="#d4d4d8" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content={new URL(`https://www.efrencodes.com/articulos/${slug}`)}
+    />
+    <meta
+      name="application-name"
+      content={new URL(`https://www.efrencodes.com/articulos/${slug}`)}
+    />
+    <meta name="theme-color" content="#d4d4d8" />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Efrén Martínez" />
+  </head>
+  <body
+    class="min-h-screen bg-slate-800 text-zinc-100 px-6 py-32 font-mono flex items-center justify-center"
+  >
+    <main class="max-w-[38rem] w-full">
+      <slot />
+    </main>
+  </body>
+</html>
+
