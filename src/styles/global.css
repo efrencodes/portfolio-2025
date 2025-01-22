@@ -43,11 +43,11 @@ a:hover::after {
   }
 }
 p, li {
-  @apply text-xs text-[#909090] mt-1 leading-5
+  @apply text-sm text-[#909090] mt-1 leading-5
 }
 h1, h2, h3, h4, h5, h6 {
-  @apply font-normal text-sm mt-10
+  @apply font-normal text-base mt-10
 }
 a {
-  @apply text-xs text-[#909090]
+  @apply text-sm text-[#909090]
 }
