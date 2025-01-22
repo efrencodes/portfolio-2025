@@ -2,7 +2,7 @@ const DEFAULT_META_DESCRIPTION =
   "Senior frontend enginner con más de 8 años de experiencia desarrollando productos digitales";
 
 const DEFAULT_META_HEADLINE = {
-  title: `Efren Martinez - " + ${DEFAULT_META_DESCRIPTION}`,
+  title: `Efren Martinez - ${DEFAULT_META_DESCRIPTION}`,
   description: DEFAULT_META_DESCRIPTION,
   url: new URL("https://www.efrencodes.com"),
 };
