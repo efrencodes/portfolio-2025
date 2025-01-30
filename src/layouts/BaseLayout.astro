@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { SEO } from "astro-seo";
 import { META_SEO, DEFAULT_THEME_COLOR } from "@config/seo"
 import "@styles/global.css";
@@ -74,6 +75,16 @@ import "@styles/global.css";
     class="min-h-screen bg-slate-800 text-zinc-100 px-6 py-32 font-mono flex items-center justify-center"
   >
     <main class="max-w-[38rem] w-full">
+      <!-- <div class="absolute top-6 right-6 w-48 h-48">
+        <Image
+          src="/home/efren-martinez.jpeg"
+          alt="Profile picture"
+          width={192}
+          height={192}
+          class="object-cover bg-center"
+          priority
+        />
+      </div> -->
       <slot />
     </main>
   </body>
