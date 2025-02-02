@@ -4,7 +4,7 @@ const DEFAULT_META_DESCRIPTION =
 const DEFAULT_META_HEADLINE = {
   title: `Efren Martinez - ${DEFAULT_META_DESCRIPTION}`,
   description: DEFAULT_META_DESCRIPTION,
-  url: new URL("https://www.efrencodes.com"),
+  url: new URL("https://www.efrencodes.dev"),
 };
 
 export const META_SEO = {

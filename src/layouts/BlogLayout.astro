@@ -33,7 +33,7 @@ const schema = {
   description: description,
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": `https://www.efrencodes.com/articulos/${slug}`,
+    "@id": `https://www.efrencodes.dev/articulos/${slug}`,
   },
   keywords: [keywords],
   headline: title,
@@ -41,7 +41,7 @@ const schema = {
   author: {
     "@type": "Person",
     name: "Efrén Martínez",
-    url: `https://www.efrencodes.com/`,
+    url: `https://www.efrencodes.dev/`,
   },
 };
 ---
@@ -54,21 +54,21 @@ const schema = {
       charset="UTF-8"
       title={title}
       description={description}
-      canonical={new URL(`https://www.efrencodes.com/articulos/${slug}`)}
+      canonical={new URL(`https://www.efrencodes.dev/articulos/${slug}`)}
       twitter={{
         creator: "@efrencodes",
         card: "summary_large_image",
-        site: `https://www.efrencodes.com/articulos/${slug}`,
+        site: `https://www.efrencodes.dev/articulos/${slug}`,
         title: title,
         description: description,
-        image: "https://www.efrencodes.com/images/profile-efren-martinez.webp",
+        image: "https://www.efrencodes.dev/images/profile-efren-martinez.webp",
         imageAlt: "Profile - efrencodes",
       }}
       openGraph={{
         basic: {
           title: title,
-          image: "https://www.efrencodes.com/images/profile-efren-martinez.webp",
-          url: new URL(`https://www.efrencodes.com/articulos/${slug}`),
+          image: "https://www.efrencodes.dev/images/profile-efren-martinez.webp",
+          url: new URL(`https://www.efrencodes.dev/articulos/${slug}`),
           type: "summary_large_image",
         },
         optional: {
@@ -86,11 +86,11 @@ const schema = {
     <meta name="robots" content="index, follow" />
     <meta
       name="apple-mobile-web-app-title"
-      content={new URL(`https://www.efrencodes.com/articulos/${slug}`)}
+      content={new URL(`https://www.efrencodes.dev/articulos/${slug}`)}
     />
     <meta
       name="application-name"
-      content={new URL(`https://www.efrencodes.com/articulos/${slug}`)}
+      content={new URL(`https://www.efrencodes.dev/articulos/${slug}`)}
     />
     <meta name="theme-color" content="#d4d4d8" />
     <meta name="keywords" content={keywords} />
