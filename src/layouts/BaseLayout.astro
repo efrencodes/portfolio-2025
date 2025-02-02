@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { SEO } from "astro-seo";
-import { META_SEO, DEFAULT_THEME_COLOR } from "@config/seo"
+import { META_SEO, DEFAULT_THEME_COLOR, DEFAULT_AUTHOR } from "@config/seo"
 import "@styles/global.css";
 ---
 
@@ -26,7 +26,7 @@ import "@styles/global.css";
         basic: {
           title: META_SEO.openGraph.title,
           image: META_SEO.openGraph.image,
-          url: META_SEO.openGraph.url,
+          url: new URL(META_SEO.openGraph.url),
           type: "summary_large_image",
         },
         optional: {
@@ -51,18 +51,18 @@ import "@styles/global.css";
     />
     <meta
       name="apple-mobile-web-app-title"
-      content={META_SEO.canonical}
+      content={new URL(`${META_SEO.canonical}`)}
     />
     <meta
       name="application-name"
-      content={META_SEO.canonical}
+      content={new URL(`${META_SEO.canonical}`)}
     />
     <meta name="theme-color" content={DEFAULT_THEME_COLOR} />
     <meta
       name="keywords"
       content=""
     />
-    <meta name="author" content="Efrén Martínez" />
+    <meta name="author" content={DEFAULT_AUTHOR} />
     {/* Bing Webmaster Tools */}
     <meta name="msvalidate.01" content="" />
     {/* ahrefs */}

@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import { META_SEO, DEFAULT_PAGE_BLOG, DEFAULT_THEME_COLOR, DEFAULT_AUTHOR } from "@config/seo";
 
 interface Props {
   title: string;
@@ -32,50 +33,51 @@ const {
       charset="UTF-8"
       title={title}
       description={description}
-      canonical={new URL(`https://www.efrencodes.dev/articulos/${slug}`)}
+      canonical={new URL(`${DEFAULT_PAGE_BLOG}${slug}`)}
       twitter={{
-        creator: "@efrencodes",
+        creator: META_SEO.twitter.creator,
         card: "summary_large_image",
-        site: `https://www.efrencodes.dev/articulos/${slug}`,
+        site: `${DEFAULT_PAGE_BLOG}${slug}`,
         title: title,
         description: description,
         image: "https://www.efrencodes.dev/images/profile-efren-martinez.webp",
-        imageAlt: "Profile - efrencodes",
+        imageAlt: title,
       }}
       openGraph={{
         basic: {
           title: title,
           image: "https://www.efrencodes.dev/images/profile-efren-martinez.webp",
-          url: new URL(`https://www.efrencodes.dev/articulos/${slug}`),
+          url: new URL(`${DEFAULT_PAGE_BLOG}${slug}`),
           type: "summary_large_image",
         },
         optional: {
           description: description,
-          siteName: "Efrén Martínez - Frontend Engineer",
-          locale: "es-MX",
+          siteName: META_SEO.openGraph.siteName,
+          locale: META_SEO.openGraph.locale,
         },
       }}
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="google" content="notranslate" />
-    <meta name="msapplication-TileColor" content="#d4d4d8" />
+    <meta name="msapplication-TileColor" content={DEFAULT_THEME_COLOR} />
     <meta name="robots" content="index, follow" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta
       name="apple-mobile-web-app-title"
-      content={new URL(`https://www.efrencodes.dev/articulos/${slug}`)}
+      content={new URL(`${DEFAULT_PAGE_BLOG}${slug}`)}
     />
     <meta
       name="application-name"
-      content={new URL(`https://www.efrencodes.dev/articulos/${slug}`)}
+      content={new URL(`${DEFAULT_PAGE_BLOG}${slug}`)}
     />
-    <meta name="theme-color" content="#d4d4d8" />
+    <meta name="theme-color" content={DEFAULT_THEME_COLOR} />
     <meta name="keywords" content={keywords} />
-    <meta name="author" content="Efrén Martínez" />
+    <meta name="author" content={DEFAULT_AUTHOR} />
   </head>
   <body
-    class="min-h-screen bg-slate-800 text-zinc-100 px-6 py-32 font-mono flex items-center justify-center"
+    class="min-h-screen bg-slate-800 text-zinc-100 px-6 py-38 font-mono flex items-center justify-center"
   >
     <main class="max-w-[38rem] w-full">
       <slot />
