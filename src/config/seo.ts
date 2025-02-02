@@ -1,10 +1,11 @@
+const DEFAULT_PAGE_WEB = "https://www.efrencodes.dev";
 const DEFAULT_META_DESCRIPTION =
-  "Senior frontend engineer con más de 8 años de experiencia desarrollando productos digitales";
+  "Frontend engineer de productos digitales, con experiencia en React, Vuejs, Next.js, TypeScript, Tailwind CSS, GraphQL.";
 
 const DEFAULT_META_HEADLINE = {
   title: `Efren Martinez - ${DEFAULT_META_DESCRIPTION}`,
   description: DEFAULT_META_DESCRIPTION,
-  url: new URL("https://www.efrencodes.dev"),
+  url: new URL(DEFAULT_PAGE_WEB),
 };
 
 export const META_SEO = {
