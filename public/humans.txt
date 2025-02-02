@@ -1,6 +1,6 @@
 /* TEAM */
 	Chef: Efren Martinez
-	Contact: hey [at] efrencodes.com
+	Contact: efrencodes [at] gmail.com
 	Twitter: @efrencodes
 	From: Queretaro, Mexico.
 
@@ -10,4 +10,4 @@
 	Last update: 2023/10/20
     Language: Spanish
 	Doctype: Astro, Tailwindcss
-	IDE: VSCode
+	IDE: Cursor
