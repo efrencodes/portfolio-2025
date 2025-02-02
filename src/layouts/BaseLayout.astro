@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import { SEO } from "astro-seo";
 import { META_SEO, DEFAULT_THEME_COLOR, DEFAULT_AUTHOR } from "@config/seo"
 import "@styles/global.css";
@@ -42,7 +41,11 @@ import "@styles/global.css";
     <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
     <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link
       type="text/plain"
@@ -75,16 +78,6 @@ import "@styles/global.css";
     class="min-h-screen bg-slate-800 text-zinc-100 px-4 py-32 font-mono flex items-center justify-center"
   >
     <main class="max-w-[38rem] w-full">
-      <!-- <div class="absolute top-6 right-6 w-48 h-48">
-        <Image
-          src="/home/efren-martinez.jpeg"
-          alt="Profile picture"
-          width={192}
-          height={192}
-          class="object-cover bg-center"
-          priority
-        />
-      </div> -->
       <slot />
     </main>
   </body>
