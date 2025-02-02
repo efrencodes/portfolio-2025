@@ -21,35 +21,13 @@ const {
   title,
   description,
   slug,
-  keywords,
-  ogImage,
-  date,
+  keywords
 } = Astro.props;
-
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  datePublished: date,
-  description: description,
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": `https://www.efrencodes.dev/articulos/${slug}`,
-  },
-  keywords: [keywords],
-  headline: title,
-  image: [ogImage],
-  author: {
-    "@type": "Person",
-    name: "Efrén Martínez",
-    url: `https://www.efrencodes.dev/`,
-  },
-};
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     <SEO
       charset="UTF-8"
       title={title}
