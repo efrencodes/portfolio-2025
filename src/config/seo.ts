@@ -1,4 +1,4 @@
-const DEFAULT_PAGE_WEB = "https://www.efrencodes.dev";
+export const DEFAULT_PAGE_WEB = "https://www.efrencodes.dev";
 const DEFAULT_META_DESCRIPTION =
   "Frontend engineer de productos digitales, con experiencia en React, Vuejs, Next.js, TypeScript, Tailwind CSS, GraphQL.";
 

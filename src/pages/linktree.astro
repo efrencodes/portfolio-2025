@@ -1,0 +1,29 @@
+---
+import LinktreeLayout from "@layouts/LinktreeLayout.astro";
+import PhotoProfile from "@components/PhotoProfile.astro";
+import { links } from "@config/social-media";
+---
+
+<LinktreeLayout>
+  <div class="flex flex-col items-center gap-4 py-8">
+    <PhotoProfile />
+    <h2>@efrencodes</h2>
+    <h1 class="text-2xl font-bold text-black">Efren Martinez</h1>
+    <p class="text-black">
+      I am Efren Martinez, a senior frontend engineer at OCC Mundial, developing
+      digital products and collaborating with UI/UX, Infrastructure, Project
+      Managers and Backend teams.
+    </p>
+  </div>
+  <div class="space-y-4">
+    {
+      links.map((link, _) => (
+        <div class="w-full h-auto py-4 px-6 bg-white hover:bg-gray-50 border-[3px] border-black rounded-full flex items-center justify-between gap-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-shadow">
+          <div class="flex items-center gap-3 flex-1">
+            <span class="text-left font-medium">{link.title}</span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</LinktreeLayout>
