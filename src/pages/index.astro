@@ -3,7 +3,6 @@ import { Image } from 'astro:assets'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import ProjectCard from '@components/ProjectCard.astro'
 import WritingCard from '@components/WritingCard.astro'
-import ExperienceCard from '@components/ExperienceCard.astro'
 ---
 
 <BaseLayout>
@@ -52,6 +51,29 @@ import ExperienceCard from '@components/ExperienceCard.astro'
 			</section>
 
 			<section class="mb-12">
+				<h2 class="text-xl font-medium mb-6">Writing</h2>
+				<div class="space-y-8">
+					<WritingCard
+						year="2024"
+						title="Cómo crear y usar los alias en Git ↗"
+						description="Cómo configurar atajos personalizados para simplificar comandos más utilizados o complejos"
+					/>
+
+					<WritingCard
+						year="2023"
+						title="Cómo usar los slots en Astro ↗"
+						description="Aprende a utilizar estos espacios reservados en tus componentes y potencia tu desarrollo web con Astro."
+					/>
+
+					<WritingCard
+						year="2022"
+						title="Cómo convertir un número a formato de moneda en JavaScript ↗"
+						description="El método Intl.NumberFormat() nos permite formatear a un valor más legible."
+					/>
+				</div>
+			</section>
+
+			<section class="mb-12">
 				<h2 class="text-xl font-medium mb-6">Projects</h2>
 				<div class="space-y-12">
 					<ProjectCard
@@ -71,82 +93,6 @@ import ExperienceCard from '@components/ExperienceCard.astro'
 							'/placeholder.svg?height=150&width=80',
 							'/placeholder.svg?height=150&width=80',
 							'/placeholder.svg?height=150&width=80',
-						]}
-					/>
-
-					<ProjectCard
-						year="2020"
-						title="Suzuki Autos at Suzuki ↗"
-						description="Website create for Suzuki Mexico. Its made using Vuejs with Quasar Framework, SASS for styles, and Google Maps for shows retails in Mexico."
-						images={[
-							'/placeholder.svg?height=150&width=80',
-							'/placeholder.svg?height=150&width=80',
-						]}
-					/>
-				</div>
-			</section>
-
-			<section class="mb-12">
-				<h2 class="text-xl font-medium mb-6">Side Projects</h2>
-			</section>
-
-			<section class="mb-12">
-				<h2 class="text-xl font-medium mb-6">Writing</h2>
-				<div class="space-y-8">
-					<WritingCard
-						year="2024"
-						title="Cómo crear y usar los alias en Git, Efren Martinez ↗"
-						description="Cómo configurar atajos personalizados para simplificar comandos más utilizados o complejos"
-					/>
-
-					<WritingCard
-						year="2023"
-						title="Cómo usar los slots en Astro, Efren Martinez ↗"
-						description="Aprende a utilizar estos espacios reservados en tus componentes y potencia tu desarrollo web con Astro."
-					/>
-
-					<WritingCard
-						year="2022"
-						title="Cómo convertir un número a formato de moneda en JavaScript, Efren Martinez ↗"
-						description="El método Intl.NumberFormat() nos permite formatear a un valor más legible."
-					/>
-				</div>
-			</section>
-
-			<section>
-				<h2 class="text-xl font-medium mb-6">Work Experience</h2>
-				<div class="space-y-12">
-					<ExperienceCard
-						period="2021 — Now"
-						title="Frontend Developer - React at OCC Mundial ↗"
-						description="Collaborate with PM, UX designers to design, build, test and improve new features."
-						details={[
-							'Frontend development with React.js using Next.js, TypeScript, Styled Components and testing with React Testing Library.',
-							'Implemented web services with REST and GraphQL.',
-							'Write unit testing code with JEST / React Testing Library.',
-							'Implemented testing e2e with Cypress.',
-						]}
-					/>
-
-					<ExperienceCard
-						period="2018 — 2021"
-						title="Frontend Developer - Vuejs at Marciano Studio ↗"
-						description="Work with product designers, backend engineers to design, build, test and improve web products."
-						details={[
-							'Development of the new version of the website of Suzuki México using Quasar Framework, HTML, Vue JS and Google Maps increasing traffic by 80%.',
-							'Implementation of payment gateways with OpenPay for Biticino Store increasing sales by 30% more.',
-							'Implemented websites, mobile applications and landing pages in more than 8 applications using Vuejs, JavaScript(ES6), CSS (SASS) and Nodejs.',
-							'Refactored code and implementing new features on the checkout Vuejs apps',
-						]}
-					/>
-
-					<ExperienceCard
-						period="2015 — 2018"
-						title="Web Developer at Grupo Educare ↗"
-						description="Implemented web services with PHP."
-						details={[
-							'Contributed in building of ecommerce.',
-							'Backend development with PHP using Zend Framework, MySQL and Linux.',
 						]}
 					/>
 				</div>
