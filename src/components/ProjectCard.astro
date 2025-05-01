@@ -1,56 +1,56 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets'
 interface Props {
-  year: string;
-  title: string;
-  description: string;
-  stack?: string[]
-  images?: string[]
+	year: string
+	title: string
+	description: string
+	stack?: string[]
+	images?: string[]
 }
-const { year, title, description, stack, images } = Astro.props;
+const { year, title, description, stack, images } = Astro.props
 ---
 
 <div
-  class="flex gap-6 mb-2 p-4 rounded-lg hover:bg-gray-800/30 transition-colors"
+	class="flex gap-6 mb-2 p-4 rounded-lg hover:bg-gray-800/30 transition-colors"
 >
-  <div class="text-gray-500 w-12">{year}</div>
-  <div class="flex-1">
-    <h3 class="text-lg font-medium mb-2">
-      <a href="#" class="hover:text-gray-100 transition">
-        {title}
-      </a>
-    </h3>
-    <p class="text-gray-400 mb-4">{description}</p>
+	<div class="text-gray-500 w-12">{year}</div>
+	<div class="flex-1">
+		<h3 class="text-lg font-medium mb-2">
+			<a href="#" class="hover:text-gray-100 transition">
+				{title}
+			</a>
+		</h3>
+		<p class="text-gray-400 mb-4">{description}</p>
 
-    {
-      stack && (
-        <div class="mb-4">
-          <p class="text-yellow-500 mb-2">✨ Stack tecnologico:</p>
-          <ul class="list-disc pl-5 text-gray-400 space-y-1">
-            {stack.map((item: any) => (
-              <li>{item}</li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
+		{
+			stack && (
+				<div class="mb-4">
+					<p class="text-yellow-500 mb-2">✨ Stack tecnologico:</p>
+					<ul class="list-disc pl-5 text-gray-400 space-y-1">
+						{stack.map((item: any) => (
+							<li>{item}</li>
+						))}
+					</ul>
+				</div>
+			)
+		}
 
-    {
-      images && images.length > 0 && (
-        <div class="flex gap-2 overflow-x-auto py-2">
-          {images.map((image: any) => (
-            <div class="flex-shrink-0">
-              <Image
-                src={image || "/placeholder.svg"}
-                alt={`Project screenshot`}
-                width={80}
-                height={150}
-                class="rounded-md border border-gray-700"
-              />
-            </div>
-          ))}
-        </div>
-      )
-    }
-  </div>
+		{
+			images && images.length > 0 && (
+				<div class="flex gap-2 overflow-x-auto py-2">
+					{images.map((image: any) => (
+						<div class="flex-shrink-0">
+							<Image
+								src={image || '/placeholder.svg'}
+								alt={`Project screenshot`}
+								width={80}
+								height={150}
+								class="rounded-md border border-gray-700"
+							/>
+						</div>
+					))}
+				</div>
+			)
+		}
+	</div>
 </div>

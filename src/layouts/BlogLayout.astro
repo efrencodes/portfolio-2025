@@ -1,91 +1,99 @@
 ---
-import { SEO } from "astro-seo";
-import { META_SEO, DEFAULT_PAGE_BLOG, DEFAULT_THEME_COLOR, DEFAULT_AUTHOR } from "@config/seo";
+import { SEO } from 'astro-seo'
+import {
+	META_SEO,
+	DEFAULT_PAGE_BLOG,
+	DEFAULT_THEME_COLOR,
+	DEFAULT_AUTHOR,
+} from '@config/seo'
 
 interface Props {
-  title: string;
-  description: string;
-  date: string;
-  tags: string[];
-  authors: string[];
-  ogImage: string;
-  cover: string;
-  keywords: string;
-  slug: string;
-  urlNext?: string;
-  urlPrevious?: string;
-  titleNext?: string;
-  titlePrevious?: string;
+	title: string
+	description: string
+	date: string
+	tags: string[]
+	authors: string[]
+	ogImage: string
+	cover: string
+	keywords: string
+	slug: string
+	urlNext?: string
+	urlPrevious?: string
+	titleNext?: string
+	titlePrevious?: string
 }
 
-const {
-  title,
-  description,
-  slug,
-  keywords
-} = Astro.props;
+const { title, description, slug, keywords } = Astro.props
 ---
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <SEO
-      charset="UTF-8"
-      title={title}
-      description={description}
-      canonical={new URL(`${DEFAULT_PAGE_BLOG}${slug}`)}
-      twitter={{
-        creator: META_SEO.twitter.creator,
-        card: "summary_large_image",
-        site: `${DEFAULT_PAGE_BLOG}${slug}`,
-        title: title,
-        description: description,
-        image: "https://www.efrencodes.dev/images/profile-efren-martinez.webp",
-        imageAlt: title,
-      }}
-      openGraph={{
-        basic: {
-          title: title,
-          image: "https://www.efrencodes.dev/images/profile-efren-martinez.webp",
-          url: new URL(`${DEFAULT_PAGE_BLOG}${slug}`),
-          type: "summary_large_image",
-        },
-        optional: {
-          description: description,
-          siteName: META_SEO.openGraph.siteName,
-          locale: META_SEO.openGraph.locale,
-        },
-      }}
-    />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="google" content="notranslate" />
-    <meta name="msapplication-TileColor" content={DEFAULT_THEME_COLOR} />
-    <meta name="robots" content="index, follow" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-    <meta
-      name="apple-mobile-web-app-title"
-      content={new URL(`${DEFAULT_PAGE_BLOG}${slug}`)}
-    />
-    <meta
-      name="application-name"
-      content={new URL(`${DEFAULT_PAGE_BLOG}${slug}`)}
-    />
-    <meta name="theme-color" content={DEFAULT_THEME_COLOR} />
-    <meta name="keywords" content={keywords} />
-    <meta name="author" content={DEFAULT_AUTHOR} />
-  </head>
-  <body
-    class="min-h-screen bg-slate-800 text-zinc-100 px-6 py-38 font-mono flex items-center justify-center"
-  >
-    <main class="max-w-[38rem] w-full">
-      <slot />
-    </main>
-  </body>
+	<head>
+		<SEO
+			charset="UTF-8"
+			title={title}
+			description={description}
+			canonical={new URL(`${DEFAULT_PAGE_BLOG}${slug}`)}
+			twitter={{
+				creator: META_SEO.twitter.creator,
+				card: 'summary_large_image',
+				site: `${DEFAULT_PAGE_BLOG}${slug}`,
+				title: title,
+				description: description,
+				image: 'https://www.efrencodes.dev/images/profile-efren-martinez.webp',
+				imageAlt: title,
+			}}
+			openGraph={{
+				basic: {
+					title: title,
+					image: 'https://www.efrencodes.dev/images/profile-efren-martinez.webp',
+					url: new URL(`${DEFAULT_PAGE_BLOG}${slug}`),
+					type: 'summary_large_image',
+				},
+				optional: {
+					description: description,
+					siteName: META_SEO.openGraph.siteName,
+					locale: META_SEO.openGraph.locale,
+				},
+			}}
+		/>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="google" content="notranslate" />
+		<meta name="msapplication-TileColor" content={DEFAULT_THEME_COLOR} />
+		<meta name="robots" content="index, follow" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="/favicon/favicon-96x96.png"
+			sizes="96x96"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon/favicon.ico" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/favicon/apple-touch-icon.png"
+		/>
+		<link rel="manifest" href="/favicon/site.webmanifest" />
+		<meta
+			name="apple-mobile-web-app-title"
+			content={new URL(`${DEFAULT_PAGE_BLOG}${slug}`)}
+		/>
+		<meta
+			name="application-name"
+			content={new URL(`${DEFAULT_PAGE_BLOG}${slug}`)}
+		/>
+		<meta name="theme-color" content={DEFAULT_THEME_COLOR} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content={DEFAULT_AUTHOR} />
+	</head>
+	<body
+		class="min-h-screen bg-slate-800 text-zinc-100 px-6 py-38 font-mono flex items-center justify-center"
+	>
+		<main class="max-w-[38rem] w-full">
+			<slot />
+		</main>
+	</body>
 </html>
-

@@ -1,82 +1,86 @@
 ---
-import { SEO } from "astro-seo";
-import { META_SEO, DEFAULT_THEME_COLOR, DEFAULT_AUTHOR } from "@config/seo"
-import "@styles/global.css";
+import { SEO } from 'astro-seo'
+import { META_SEO, DEFAULT_THEME_COLOR, DEFAULT_AUTHOR } from '@config/seo'
+import '@styles/global.css'
 ---
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <SEO
-      charset="UTF-8"
-      title={META_SEO.title}
-      description={META_SEO.description}
-      canonical={META_SEO.canonical}
-      twitter={{
-        creator: META_SEO.twitter.creator,
-        card: "summary_large_image",
-        site: META_SEO.twitter.creator,
-        title: META_SEO.title,
-        description: META_SEO.description,
-        image: META_SEO.twitter.image,
-        imageAlt: META_SEO.twitter.imageAlt,
-      }}
-      openGraph={{
-        basic: {
-          title: META_SEO.openGraph.title,
-          image: META_SEO.openGraph.image,
-          url: new URL(META_SEO.openGraph.url),
-          type: "summary_large_image",
-        },
-        optional: {
-          description: META_SEO.openGraph.description,
-          siteName: META_SEO.openGraph.siteName,
-          locale: META_SEO.openGraph.locale,
-        },
-      }}
-    />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="google" content="notranslate" />
-    <meta name="msapplication-TileColor" content={DEFAULT_THEME_COLOR} />
-    <meta name="robots" content="index, follow" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    <link
-      type="text/plain"
-      rel="author"
-      href={`${META_SEO.canonical}/humans.txt`}
-    />
-    <meta
-      name="apple-mobile-web-app-title"
-      content={new URL(`${META_SEO.canonical}`)}
-    />
-    <meta
-      name="application-name"
-      content={new URL(`${META_SEO.canonical}`)}
-    />
-    <meta name="theme-color" content={DEFAULT_THEME_COLOR} />
-    <meta
-      name="keywords"
-      content=""
-    />
-    <meta name="author" content={DEFAULT_AUTHOR} />
-    {/* Bing Webmaster Tools */}
-    <meta name="msvalidate.01" content="" />
-    {/* ahrefs */}
-    <meta
-      name="ahrefs-site-verification"
-      content=""
-    />
-  </head>
-  <body
-    class="bg-[#121212] text-gray-200"
-  >
-    <slot />
-  </body>
+	<head>
+		<SEO
+			charset="UTF-8"
+			title={META_SEO.title}
+			description={META_SEO.description}
+			canonical={META_SEO.canonical}
+			twitter={{
+				creator: META_SEO.twitter.creator,
+				card: 'summary_large_image',
+				site: META_SEO.twitter.creator,
+				title: META_SEO.title,
+				description: META_SEO.description,
+				image: META_SEO.twitter.image,
+				imageAlt: META_SEO.twitter.imageAlt,
+			}}
+			openGraph={{
+				basic: {
+					title: META_SEO.openGraph.title,
+					image: META_SEO.openGraph.image,
+					url: new URL(META_SEO.openGraph.url),
+					type: 'summary_large_image',
+				},
+				optional: {
+					description: META_SEO.openGraph.description,
+					siteName: META_SEO.openGraph.siteName,
+					locale: META_SEO.openGraph.locale,
+				},
+			}}
+		/>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="google" content="notranslate" />
+		<meta name="msapplication-TileColor" content={DEFAULT_THEME_COLOR} />
+		<meta name="robots" content="index, follow" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="/favicon/favicon-96x96.png"
+			sizes="96x96"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon/favicon.ico" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/favicon/apple-touch-icon.png"
+		/>
+		<link rel="manifest" href="/favicon/site.webmanifest" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			type="text/plain"
+			rel="author"
+			href={`${META_SEO.canonical}/humans.txt`}
+		/>
+		<meta
+			name="apple-mobile-web-app-title"
+			content={new URL(`${META_SEO.canonical}`)}
+		/>
+		<meta
+			name="application-name"
+			content={new URL(`${META_SEO.canonical}`)}
+		/>
+		<meta name="theme-color" content={DEFAULT_THEME_COLOR} />
+		<meta name="keywords" content="" />
+		<meta name="author" content={DEFAULT_AUTHOR} />
+		{/* Bing Webmaster Tools */}
+		<meta name="msvalidate.01" content="" />
+		{/* ahrefs */}
+		<meta name="ahrefs-site-verification" content="" />
+	</head>
+	<body class="bg-[#121212] text-gray-200">
+		<slot />
+	</body>
 </html>
