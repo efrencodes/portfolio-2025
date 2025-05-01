@@ -1,30 +1,153 @@
 ---
-import TodaySection from "@components/TodaySection.astro";
-import ContactSection from "@components/ContactSection.astro";
-import ContainerSection from "@components/ContainerSection.astro";
-import ListItem from "@components/ListItem.astro";
-import UserProfile from "@components/UserProfile.astro";
+import { Image } from "astro:assets";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import PhotoProfile from "@components/PhotoProfile.astro";
-
-import { ListProject } from "@config/projects";
-import type { ListProjectProps } from "@config/projects";
+import ProjectCard from "@components/ProjectCard.astro"
+import WritingCard from "@components/WritingCard.astro";
+import ExperienceCard from "@components/ExperienceCard.astro";
 ---
 
 <BaseLayout>
-  <PhotoProfile />
+  <div class="min-h-screen bg-[#121212] text-gray-200">
+    <main class="max-w-3xl mx-auto p-6 md:p-8">
+      <div class="mb-12">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="relative">
+            <Image
+              src="/home/efren-martinez.webp"
+              alt="Profile picture"
+              width={100}
+              height={100}
+              class="rounded-full border-2 border-gray-700"
+              priority
+            />
+            <div
+              class="absolute -bottom-1 -right-1 bg-yellow-400 rounded-full p-1"
+            >
+              <span class="sr-only">Verificado</span>
+              <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+            </div>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold">Efren Martinez</h1>
+            <p class="text-gray-400">Frontend Engineer in Queretaro</p>
+            <a
+              href="https://efrencodes.dev"
+              class="inline-block mt-1 px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-400 hover:bg-gray-700 transition"
+            >
+              efrencodes.dev
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <UserProfile />
+      <section class="mb-12">
+        <h2 class="text-xl font-medium mb-4">About</h2>
+        <p class="text-gray-400">
+          I&apos;m a Frontend Engineer from Queretaro City 🇲🇽 who works React +
+          Nextjs, Tailwindcss, and GraphQL.
+        </p>
+      </section>
 
-  <TodaySection />
+      <section class="mb-12">
+        <h2 class="text-xl font-medium mb-6">Projects</h2>
+        <div class="space-y-12">
+          <ProjectCard
+            year="2024"
+            title="Nuevo flujo de creación de cuenta at OCC mundial ↗"
+            description="Se mejoró el flujo para la creación de cuentas de nuevos candidatos con un enfoque especial en dispositivos móviles. Ahora, se evitará el abandono durante el flujo, asegurando que los CV sean completos y precisos."
+            stack={[
+              "React + Next14 con los features de React Server Components y Client Server Components.",
+              "Tailwindcss",
+              "Apollo Server y GraphQL",
+              "Pruebas unitarias con Jest",
+              "Pruebas automatizadas con Cypress",
+            ]}
+            images={[
+              "/placeholder.svg?height=150&width=80",
+              "/placeholder.svg?height=150&width=80",
+              "/placeholder.svg?height=150&width=80",
+              "/placeholder.svg?height=150&width=80",
+              "/placeholder.svg?height=150&width=80",
+            ]}
+          />
 
-  <ContainerSection title="proyectos">
-    {
-      ListProject.map((listProjectsItems: ListProjectProps, _) => {
-        return <ListItem {...listProjectsItems} />;
-      })
-    }
-  </ContainerSection>
+          <ProjectCard
+            year="2020"
+            title="Suzuki Autos at Suzuki ↗"
+            description="Website create for Suzuki Mexico. Its made using Vuejs with Quasar Framework, SASS for styles, and Google Maps for shows retails in Mexico."
+            images={[
+              "/placeholder.svg?height=150&width=80",
+              "/placeholder.svg?height=150&width=80",
+            ]}
+          />
+        </div>
+      </section>
 
-  <ContactSection />
+      <section class="mb-12">
+        <h2 class="text-xl font-medium mb-6">Side Projects</h2>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-xl font-medium mb-6">Writing</h2>
+        <div class="space-y-8">
+          <WritingCard
+            year="2024"
+            title="Cómo crear y usar los alias en Git, Efren Martinez ↗"
+            description="Cómo configurar atajos personalizados para simplificar comandos más utilizados o complejos"
+          />
+
+          <WritingCard
+            year="2023"
+            title="Cómo usar los slots en Astro, Efren Martinez ↗"
+            description="Aprende a utilizar estos espacios reservados en tus componentes y potencia tu desarrollo web con Astro."
+          />
+
+          <WritingCard
+            year="2022"
+            title="Cómo convertir un número a formato de moneda en JavaScript, Efren Martinez ↗"
+            description="El método Intl.NumberFormat() nos permite formatear a un valor más legible."
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-medium mb-6">Work Experience</h2>
+        <div class="space-y-12">
+          <ExperienceCard
+            period="2021 — Now"
+            title="Frontend Developer - React at OCC Mundial ↗"
+            description="Collaborate with PM, UX designers to design, build, test and improve new features."
+            details={[
+              "Frontend development with React.js using Next.js, TypeScript, Styled Components and testing with React Testing Library.",
+              "Implemented web services with REST and GraphQL.",
+              "Write unit testing code with JEST / React Testing Library.",
+              "Implemented testing e2e with Cypress.",
+            ]}
+          />
+
+          <ExperienceCard
+            period="2018 — 2021"
+            title="Frontend Developer - Vuejs at Marciano Studio ↗"
+            description="Work with product designers, backend engineers to design, build, test and improve web products."
+            details={[
+              "Development of the new version of the website of Suzuki México using Quasar Framework, HTML, Vue JS and Google Maps increasing traffic by 80%.",
+              "Implementation of payment gateways with OpenPay for Biticino Store increasing sales by 30% more.",
+              "Implemented websites, mobile applications and landing pages in more than 8 applications using Vuejs, JavaScript(ES6), CSS (SASS) and Nodejs.",
+              "Refactored code and implementing new features on the checkout Vuejs apps",
+            ]}
+          />
+
+          <ExperienceCard
+            period="2015 — 2018"
+            title="Web Developer at Grupo Educare ↗"
+            description="Implemented web services with PHP."
+            details={[
+              "Contributed in building of ecommerce.",
+              "Backend development with PHP using Zend Framework, MySQL and Linux.",
+            ]}
+          />
+        </div>
+      </section>
+    </main>
+  </div>
 </BaseLayout>
