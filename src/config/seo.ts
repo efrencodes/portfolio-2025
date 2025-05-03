@@ -2,6 +2,8 @@ export const DEFAULT_AUTHOR = 'Efrén Martínez'
 export const DEFAULT_PAGE_WEB = 'https://www.efrencodes.dev'
 const DEFAULT_META_DESCRIPTION =
 	'Software engineer de productos digitales, con experiencia en React, React Native, Vuejs, Next.js, TypeScript, Tailwind CSS, GraphQL.'
+export const DEFAULT_KEYWORDS =
+	'efrencodes, desarrollo web, freelancer, diseño web, agencia digital, desarrollo a la medida, diseño de producto, software, jardin digital, javier diaz, coderdiaz.com, desarrollo de software a medida, estudio de diseño, estudio de software, software studio, design studio'
 
 const DEFAULT_META_HEADLINE = {
 	title: `${DEFAULT_AUTHOR} - ${DEFAULT_META_DESCRIPTION}`,

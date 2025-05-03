@@ -1,6 +1,11 @@
 ---
 import { SEO } from 'astro-seo'
-import { META_SEO, DEFAULT_THEME_COLOR, DEFAULT_AUTHOR } from '@config/seo'
+import {
+	META_SEO,
+	DEFAULT_THEME_COLOR,
+	DEFAULT_AUTHOR,
+	DEFAULT_KEYWORDS,
+} from '@config/seo'
 import '@styles/global.css'
 ---
 
@@ -56,10 +61,6 @@ import '@styles/global.css'
 		/>
 		<link rel="manifest" href="/favicon/site.webmanifest" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link
 			type="text/plain"
 			rel="author"
 			href={`${META_SEO.canonical}/humans.txt`}
@@ -73,7 +74,7 @@ import '@styles/global.css'
 			content={new URL(`${META_SEO.canonical}`)}
 		/>
 		<meta name="theme-color" content={DEFAULT_THEME_COLOR} />
-		<meta name="keywords" content="" />
+		<meta name="keywords" content={DEFAULT_KEYWORDS} />
 		<meta name="author" content={DEFAULT_AUTHOR} />
 		{/* Bing Webmaster Tools */}
 		<meta name="msvalidate.01" content="" />
