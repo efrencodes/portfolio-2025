@@ -9,7 +9,7 @@ export interface ListsProjectProps {
 export const ListsProject:ListsProjectProps[] = [
 	{
 		year: 2024,
-		title: 'Nuevo flujo de creación de cuenta at OCC mundial ↗',
+		title: 'Nuevo flujo de creación de cuenta | OCC mundial',
 		description:
 			'Se mejoró el flujo para la creación de cuentas de nuevos candidatos con un enfoque especial en dispositivos móviles. Ahora, se evitará el abandono durante el flujo, asegurando que los CV sean completos y precisos.',
 		stack: [
@@ -26,7 +26,7 @@ export const ListsProject:ListsProjectProps[] = [
 	},
 	{
 		year: 2024,
-		title: 'Calculadora de ISR',
+		title: 'Calculadora de ISR | OCC Mundial',
 		description:
 			'Conoce tu ingreso real después de retenciones y enfoca tu búsqueda en empleos que cumplan tus metas.',
 		stack: [
