@@ -20,11 +20,8 @@ export const ListsProject:ListsProjectProps[] = [
 			'Pruebas automatizadas con Cypress',
 		],
 		images: [
-			'/placeholder.svg?height=150&width=80',
-			'/placeholder.svg?height=150&width=80',
-			'/placeholder.svg?height=150&width=80',
-			'/placeholder.svg?height=150&width=80',
-			'/placeholder.svg?height=150&width=80',
+			'/proyectos/calculadora-de-isr/page-calculator-grafic.png',
+			'/proyectos/calculadora-de-isr/page-sueldo-neto.png'
 		],
 	},
 	{
@@ -40,11 +37,10 @@ export const ListsProject:ListsProjectProps[] = [
 			'Pruebas automatizadas con Cypress',
 		],
 		images: [
-			'/placeholder.svg?height=150&width=80',
-			'/placeholder.svg?height=150&width=80',
-			'/placeholder.svg?height=150&width=80',
-			'/placeholder.svg?height=150&width=80',
-			'/placeholder.svg?height=150&width=80',
+			'/proyectos/cvmatic/page-crea-tu-cv.png',
+			'/proyectos/cvmatic/page-cv-listo.png',
+			'/proyectos/cvmatic/page-sube-tu-cv-initial.png',
+			'/proyectos/cvmatic/page-sube-tu-cv.png',
 		],
 	},
 ]
