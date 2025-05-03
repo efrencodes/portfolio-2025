@@ -11,7 +11,7 @@ const { year, title, description, stack, images } = Astro.props
 ---
 
 <div
-	class="flex gap-6 mb-2 p-4 rounded-lg hover:bg-gray-800/30 transition-colors"
+	class="flex gap-6 mb-2 p-4 rounded-lg"
 >
 	<div class="text-gray-500 w-12">{year}</div>
 	<div class="flex-1">
@@ -41,7 +41,7 @@ const { year, title, description, stack, images } = Astro.props
 					{images.map((image: string) => (
 						<div class="flex-shrink-0">
 							<Image
-								src={image || '/placeholder.svg'}
+								src={image || ''}
 								alt={`Project screenshot`}
 								width={80}
 								height={150}
