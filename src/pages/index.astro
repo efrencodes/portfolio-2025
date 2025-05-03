@@ -3,12 +3,14 @@ import { Image } from 'astro:assets'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import ProjectCard from '@components/ProjectCard.astro'
 import WritingCard from '@components/WritingCard.astro'
+
+import { DEFAULT_AUTHOR } from '@config/seo'
 ---
 
 <BaseLayout>
 	<div class="min-h-screen bg-[#222] text-gray-200">
-		<main class="max-w-3xl mx-auto p-6 md:p-8">
-			<div class="mb-12">
+		<main class="max-w-2xl mx-auto p-6 md:p-8">
+			<section class="mb-12">
 				<div class="flex items-center gap-4 mb-4">
 					<div class="relative">
 						<Image
@@ -21,29 +23,35 @@ import WritingCard from '@components/WritingCard.astro'
 						/>
 					</div>
 					<div>
-						<h1 class="text-2xl font-bold">Efren Martinez</h1>
-						<p class="text-gray-400">
-							Frontend Engineer in Queretaro
+						<h1 class="text-2xl font-bold">{DEFAULT_AUTHOR}</h1>
+						<p class="text-gray-400 mt-2">
+							Desarrollador Frontend en la Ciudad de Querétaro
 						</p>
 						<div
-							class="inline-block mt-1 px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-400 hover:bg-gray-700 transition"
+							class="inline-block mt-2 px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-400 hover:bg-gray-700 transition"
 						>
 							efrencodes
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
 			<section class="mb-12">
-				<h2 class="text-xl font-medium mb-4">About</h2>
+				<h2 class="text-xl font-medium mb-4">Sobre mí</h2>
 				<p class="text-gray-400">
-					I&apos;m a Frontend Engineer from Queretaro City 🇲🇽 who
-					works React + Nextjs, Tailwindcss, and GraphQL.
+					Desarrollador frontend con experiencia en React, React
+					Native, Vuejs, Next.js, TypeScript, Tailwind CSS, GraphQL.
+				</p>
+				<p class="text-gray-400 mt-4">
+					Actualmente trabajo en <b class="text-yellow-400">OCC Mundial</b> donde desarrollo
+					productos digitales colaborando con equipos de UI/UX,
+					Backend, PM y Infraestructura.
 				</p>
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-xl font-medium mb-6">Writing</h2>
+				<h2 class="text-xl font-medium">Mis notas</h2>
+				<p class="text-gray-400 mb-6 mt-3"></p>
 				<div class="space-y-8">
 					<WritingCard
 						year="2024"
@@ -66,7 +74,7 @@ import WritingCard from '@components/WritingCard.astro'
 			</section>
 
 			<section class="mb-12">
-				<h2 class="text-xl font-medium mb-6">Projects</h2>
+				<h2 class="text-xl font-medium mb-6">Proyectos</h2>
 				<div class="space-y-12">
 					<ProjectCard
 						year="2024"
