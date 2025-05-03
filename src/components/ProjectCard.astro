@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 interface Props {
-	year: string
+	year: number
 	title: string
 	description: string
 	stack?: string[]
@@ -25,9 +25,9 @@ const { year, title, description, stack, images } = Astro.props
 		{
 			stack && (
 				<div class="mb-4">
-					<p class="mb-2">✨ Stack tecnologico:</p>
+					<p class="mb-2">Stack tecnologico:</p>
 					<ul class="list-disc pl-5 text-gray-400 space-y-1">
-						{stack.map((item: any) => (
+						{stack.map((item: string) => (
 							<li>{item}</li>
 						))}
 					</ul>
@@ -38,7 +38,7 @@ const { year, title, description, stack, images } = Astro.props
 		{
 			images && images.length > 0 && (
 				<div class="flex gap-2 overflow-x-auto py-2">
-					{images.map((image: any) => (
+					{images.map((image: string) => (
 						<div class="flex-shrink-0">
 							<Image
 								src={image || '/placeholder.svg'}
