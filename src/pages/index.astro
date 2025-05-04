@@ -3,6 +3,8 @@ import BaseLayout from '@layouts/BaseLayout.astro'
 import ProjectCard from '@components/ProjectCard.astro'
 import WritingCard from '@components/WritingCard.astro'
 import HeaderTitle from '@components/HeaderTitle.astro'
+import AboutMe from '@components/AboutMe.astro'
+import LayoutNoteProject from '@components/LayoutNoteProject.astro'
 
 import { ListsProject } from '@config/projects'
 import type { ListsProjectProps } from '@config/projects'
@@ -15,42 +17,23 @@ import type { ListsNoteProps } from '@config/notes'
 		<main class="max-w-2xl mx-auto p-6 md:p-8">
 			<HeaderTitle />
 
-			<section class="mb-12">
-				<h2 class="text-xl font-medium mb-4">Sobre mí</h2>
-				<p class="text-gray-400">
-					Desarrollador frontend con experiencia en React, React
-					Native, Vuejs, Next.js, TypeScript, Tailwind CSS, GraphQL.
-				</p>
-				<p class="text-gray-400 mt-4">
-					Actualmente trabajo en <b class="text-yellow-400"
-						>OCC Mundial</b
-					> donde desarrollo productos digitales colaborando con equipos
-					de UI/UX, Backend, PM y Infraestructura.
-				</p>
-			</section>
+			<AboutMe />
 
-			<section class="mb-12">
-				<h2 class="text-xl font-medium">Mis notas</h2>
-				<p class="text-gray-400 mb-6 mt-3"></p>
-				<div class="space-y-8">
-					{
-						ListsNote.map((items: ListsNoteProps) => (
-							<WritingCard {...items} />
-						))
-					}
-				</div>
-			</section>
+			<LayoutNoteProject title='Mis notas'>
+				{
+					ListsNote.map((items: ListsNoteProps) => (
+						<WritingCard {...items} />
+					))
+				}
+			</LayoutNoteProject>
 
-			<section class="mb-12">
-				<h2 class="text-xl font-medium mb-6">Proyectos</h2>
-				<div class="space-y-12">
-					{
-						ListsProject.map((items: ListsProjectProps) => (
-							<ProjectCard {...items} />
-						))
-					}
-				</div>
-			</section>
+			<LayoutNoteProject title='Proyectos'>
+				{
+					ListsProject.map((items: ListsProjectProps) => (
+						<ProjectCard {...items} />
+					))
+				}
+			</LayoutNoteProject>
 		</main>
 	</div>
 </BaseLayout>
