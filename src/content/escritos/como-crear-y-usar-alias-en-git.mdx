@@ -18,20 +18,20 @@ slug: "como-crear-y-usar-alias-en-git"
 
 Los alias en Git es una forma de crear atajos para tus comandos más utilizados o complejos.
 
-### Cómo crear un alias
+<h2 class="text-xl font-medium mb-4">Cómo crear un alias</h2>
 
 Vamos a crear un alias para el comando `git status` , permitiendo escribir `git s` en lugar de `git status` para obtener el mismos resultado.
-
+<br />
 ```bash
 $ git config --global alias.s status
 ```
-
-### Cómo usar un alias
+<br />
+<h2 class="text-xl font-medium mb-4">Cómo usar un alias</h2>
 
 Para poder usar el alias ya creado, solo debemos escribir git seguido del alias.
 
 Al escribir `git s`, se ejecutará el comando `git status`, mostrando el estado actual del repositorio. Por ejemplo:
-
+<br />
 ```bash
 $ git s
 
@@ -40,21 +40,21 @@ Your branch is up to date with 'origin/main.
 
 nothing to commit, working tree clean
 ```
-
+<br />
 ¡Exacto! Los alias son útiles para simplificar y agilizar el uso de comandos extensos o complejos, haciendo el flujo de trabajo más eficiente.
-
-### Cómo listar los alias
+<br />
+<h2 class="text-xl font-medium mb-4">Cómo listar los alias</h2>
 
 Para listar todos los alias configurados en GIt, puedes utilizar el siguiente comando en tu terminal
-
+<br />
 ```bash
 $ git config --list --show-origin
 ```
-
-### Listado de mis alias
+<br />
+<h2 class="text-xl font-medium mb-4">Listado de mis alias</h2>
 
 Te comparto mi listado que uso en mi computadora personal y del trabajo.
-
+<br />
 ```bash
 [alias]
 	br = branch -a
@@ -71,11 +71,30 @@ Te comparto mi listado que uso en mi computadora personal y del trabajo.
 	pl = pull origin
 	l = "log --graph --abbrev-commit --date=relative --all --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%>(18,trunc)%aD)%C(reset) %C(bold blue)[%<(10,trunc)%aN]%Creset - %s%C(reset) %C(bold yellow)%d%C(reset)'"
 ```
+<br />
 
-### Referencias
+<h2 class="text-xl font-medium mb-4">Referencias</h2>
 
-- [https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases)
-- [https://www.git-tower.com/learn/git/faq/how-to-set-up-git-aliases](https://www.git-tower.com/learn/git/faq/how-to-set-up-git-aliases)
+<ul>
+  <li>
+    <a
+      href="https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases"
+      target="_blank"
+      class="text-pink-600"
+    >
+      Git Basics - Git Aliases
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://www.git-tower.com/learn/git/faq/how-to-set-up-git-aliases"
+      target="_blank"
+      class="text-pink-600"
+    >
+      How to Set Up Git Aliases
+    </a>
+  </li>
+</ul>
 
 <br />
 <br />
