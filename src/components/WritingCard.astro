@@ -3,15 +3,16 @@ interface Props {
 	year: number
 	title: string
 	description: string
+	url?: string
 }
-const { year, title, description } = Astro.props
+const { year, title, description, url } = Astro.props
 ---
 
 <div class="flex gap-6 p-4 rounded-lg hover:bg-gray-800/30 transition-colors">
 	<div class="text-gray-500 w-12">{year}</div>
 	<div class="flex-1">
 		<h3 class="text-lg font-medium mb-1">
-			<a href="#" class="hover:text-gray-100 transition">
+			<a href={url} class="hover:text-gray-100 transition">
 				{title}
 			</a>
 		</h3>
