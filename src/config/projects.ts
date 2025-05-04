@@ -6,7 +6,7 @@ export interface ListsProjectProps {
 	images: string[]
 }
 
-export const ListsProject:ListsProjectProps[] = [
+export const ListsProject: ListsProjectProps[] = [
 	{
 		year: 2024,
 		title: 'Nuevo flujo de creación de cuenta | OCC mundial',
@@ -21,7 +21,7 @@ export const ListsProject:ListsProjectProps[] = [
 		],
 		images: [
 			'/proyectos/calculadora-de-isr/page-calculator-grafic.png',
-			'/proyectos/calculadora-de-isr/page-sueldo-neto.png'
+			'/proyectos/calculadora-de-isr/page-sueldo-neto.png',
 		],
 	},
 	{

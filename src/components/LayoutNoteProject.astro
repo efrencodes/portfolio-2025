@@ -4,9 +4,10 @@ interface Props {
 }
 const { title } = Astro.props
 ---
+
 <section class="mb-12">
-    <h2 class="text-xl font-medium mb-6">{title}</h2>
-    <div class="space-y-12">
-        <slot />
-    </div>
+	<h2 class="text-xl font-medium mb-6">{title}</h2>
+	<div class="space-y-12">
+		<slot />
+	</div>
 </section>

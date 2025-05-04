@@ -19,7 +19,7 @@ import type { ListsNoteProps } from '@config/notes'
 
 			<AboutMe />
 
-			<LayoutNoteProject title='Mis notas'>
+			<LayoutNoteProject title="Mis notas">
 				{
 					ListsNote.map((items: ListsNoteProps) => (
 						<WritingCard {...items} />
@@ -27,7 +27,7 @@ import type { ListsNoteProps } from '@config/notes'
 				}
 			</LayoutNoteProject>
 
-			<LayoutNoteProject title='Proyectos'>
+			<LayoutNoteProject title="Proyectos">
 				{
 					ListsProject.map((items: ListsProjectProps) => (
 						<ProjectCard {...items} />
