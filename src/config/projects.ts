@@ -33,13 +33,11 @@ export const ListsProject: ListsProjectProps[] = [
 		title: 'Calculadora de ISR - OCC Mundial ↗',
 		href: 'https://www.occ.com.mx/salarios/calculadora-de-isr/',
 		description:
-			'Conoce tu ingreso real después de retenciones y enfoca tu búsqueda en empleos que cumplan tus metas.',
+			'Se desarrolló una herramienta para obtener el calculo de tus retenciones de impuestos con tu ingreso real.  Se beneficiará a los nuevos usuarios y a aquellos que ya son candidatos en OCC',
 		stack: [
 			'React + Next14 con los features de React Server Components y Client Server Components.',
 			'Tailwindcss',
 			'Apollo Server y GraphQL',
-			'Pruebas unitarias con Jest',
-			'Pruebas automatizadas con Cypress',
 		],
 		images: [
 			'/proyectos/calculadora-de-isr/page-calculator-grafic.png',
