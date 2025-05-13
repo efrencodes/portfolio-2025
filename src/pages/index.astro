@@ -30,7 +30,7 @@ import type { ListsNoteProps } from '@config/notes'
 			<LayoutNoteProject title="Proyectos">
 				{
 					ListsProject.map((items: ListsProjectProps) => (
-						<ProjectCard {...items} />
+						!items.active && <ProjectCard {...items} />
 					))
 				}
 			</LayoutNoteProject>
