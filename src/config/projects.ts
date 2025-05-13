@@ -1,4 +1,5 @@
 export interface ListsProjectProps {
+	active: boolean
 	year: number
 	title: string
 	description: string
@@ -9,6 +10,23 @@ export interface ListsProjectProps {
 
 export const ListsProject: ListsProjectProps[] = [
 	{
+		active: true,
+		year: 2025,
+		title: 'App Es más ↗',
+		href: 'https://esmas.app/',
+		description:
+			'Desarrollo de app ',
+		stack: [
+			'React Native + Expo',
+			'Zustand',
+			'Axios',
+		],
+		images: [
+			'/proyectos/cvmatic/page-crea-tu-cv.png',
+		],
+	},
+	{
+		active: false,
 		year: 2024,
 		title: 'Nuevo flujo de creación de cuenta - OCC mundial ↗',
 		href: 'https://www.occ.com.mx/candidatos/cuenta-nueva/registro/',
@@ -29,6 +47,7 @@ export const ListsProject: ListsProjectProps[] = [
 		],
 	},
 	{
+		active: false,
 		year: 2024,
 		title: 'Calculadora de ISR - OCC Mundial ↗',
 		href: 'https://www.occ.com.mx/salarios/calculadora-de-isr/',
