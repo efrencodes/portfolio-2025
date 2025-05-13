@@ -35,4 +35,4 @@ export const META_SEO = {
 }
 
 export const DEFAULT_THEME_COLOR = '#d4d4d8'
-export const DEFAULT_PAGE_BLOG = `${DEFAULT_PAGE_WEB}/articulos/`
+export const DEFAULT_PAGE_BLOG = `${DEFAULT_PAGE_WEB}/escritos/`
