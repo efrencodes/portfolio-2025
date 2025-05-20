@@ -5,6 +5,7 @@ import WritingCard from '@components/WritingCard.astro'
 import HeaderTitle from '@components/HeaderTitle.astro'
 import AboutMe from '@components/AboutMe.astro'
 import LayoutNoteProject from '@components/LayoutNoteProject.astro'
+import Main from '@components/Main.astro'
 
 import { ListsProject } from '@config/projects'
 import type { ListsProjectProps } from '@config/projects'
@@ -13,27 +14,26 @@ import type { ListsNoteProps } from '@config/notes'
 ---
 
 <BaseLayout>
-	<div class="min-h-screen bg-[#222] text-gray-200">
-		<main class="max-w-2xl mx-auto p-6 md:p-8">
-			<HeaderTitle />
+	<Main>
+		<HeaderTitle />
 
-			<AboutMe />
+		<AboutMe />
 
-			<LayoutNoteProject title="Mis notas">
-				{
-					ListsNote.map((items: ListsNoteProps) => (
-						<WritingCard {...items} />
-					))
-				}
-			</LayoutNoteProject>
+		<LayoutNoteProject title="Mis notas">
+			{
+				ListsNote.map((items: ListsNoteProps) => (
+					<WritingCard {...items} />
+				))
+			}
+		</LayoutNoteProject>
 
-			<LayoutNoteProject title="Proyectos">
-				{
-					ListsProject.map((items: ListsProjectProps) => (
+		<LayoutNoteProject title="Proyectos">
+			{
+				ListsProject.map(
+					(items: ListsProjectProps) =>
 						!items.active && <ProjectCard {...items} />
-					))
-				}
-			</LayoutNoteProject>
-		</main>
-	</div>
+				)
+			}
+		</LayoutNoteProject>
+	</Main>
 </BaseLayout>
