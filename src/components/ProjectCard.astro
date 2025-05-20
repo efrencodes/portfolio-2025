@@ -15,7 +15,7 @@ const { year, title, description, stack, images, href } = Astro.props
 	<div class="text-gray-500 w-12">{year}</div>
 	<div class="flex-1">
 		<h3 class="text-lg font-medium mb-2">
-			<a href={href} class="hover:text-gray-100 transition">
+			<a href={href} target="_blank" class="hover:text-gray-100 transition">
 				{title}
 			</a>
 			<p class="text-gray-300 mt-2 text-xs">{href}</p>
